@@ -11,7 +11,7 @@ error_dialog = QtWidgets.QErrorMessage()
 form = uic.loadUi("web3.ui")
 
 #conecta na infura 
-infura_url = 'https://mainnet.infura.io/v3/517d2f00da4440bda181e798476aeb54'
+infura_url = 'Utilize o seu link da infura mainet para se conectar com a blockchain'
 web3 =  Web3(Web3.HTTPProvider(infura_url))
 
 #verifica se a conexão foi concluida
