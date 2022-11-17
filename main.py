@@ -10,9 +10,8 @@ error_dialog = QtWidgets.QErrorMessage()
 #carrega a tela do pyqt5
 form = uic.loadUi("web3.ui")
 
-<<<<<<< HEAD
-#conexão na infura 
-=======
+
+ 
 #conecta na infura 
 infura_url = 'Utilize o seu link da infura mainet para se conectar com a blockchain'
 web3 =  Web3(Web3.HTTPProvider(infura_url))
@@ -27,13 +26,13 @@ def main():
     if not connection:
         return error_dialog.showMessage('Verifique se você está conectado com o link da infura')
 
-    #pega o endereço da carteira
+    #armazena o endereço da carteira
     you_adress = form.lineEdit.text()
     print(type(you_adress))
     #remove os espaços
     you_adress = you_adress.strip()
     try:
-    #verificar a quantidade de ether na carteira
+    #verifica o saldo na carteira
         check_sum = web3.toChecksumAddress(you_adress)
         balance = web3.eth.get_balance(check_sum)
         
